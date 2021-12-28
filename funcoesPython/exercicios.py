@@ -1,4 +1,7 @@
 
+import math
+
+
 def returnBiggerNumber(num1, num2):
     biggerNumber = num2
     if num1 > num2:
@@ -43,8 +46,22 @@ def returnBiggerName(names):
             number = len(index)
         if number == len(index):
             name = index
-    return name      
+    return name
 
 
 print(returnBiggerName(names))
+
+
+def tinta(parede):
+    litro_lata = 18
+    litros_precisos = round(parede / 3, 2)
+    print(litros_precisos)
+    if litros_precisos < litro_lata:
+        return (1, 80)
+    latas = math.ceil(litros_precisos / litro_lata)
+    print(latas)
+    total_gasto = round(latas * 80, 2)
+    return (latas, total_gasto)
     
+
+print(tinta(80))
